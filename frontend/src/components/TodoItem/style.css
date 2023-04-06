@@ -1,0 +1,59 @@
+.item {
+  width: 100%;
+  margin-bottom: 15px;
+}
+.item .item__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border: 2px solid var(--dark);
+}
+.item .checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.item .checkbox__input {
+  margin: 0;
+}
+.item .checkbox__label {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1rem;
+  margin-left: 8px;
+}
+.item .action {
+}
+
+.item .btn {
+  width: 90px;
+  padding: 6px 18px;
+  font-size: 14px;
+  border: 0;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+.item .btn:hover {
+  opacity: 0.8;
+}
+.item .action__detail {
+  background: var(--light-blue);
+  margin-right: 10px;
+}
+.item .action__remove {
+  background: var(--red);
+}
+
+.item .form__update {
+  padding: 30px;
+  border-bottom: 2px solid var(--dark);
+  border-left: 2px solid var(--dark);
+  border-right: 2px solid var(--dark);
+}
+
+.item .form__update.disable {
+  display: none;
+}

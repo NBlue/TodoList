@@ -1,0 +1,17 @@
+.newtask {
+  padding: 30px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+  border-right: 1px solid var(--dark);
+}
+
+.newtask .title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.search__input {
+}
