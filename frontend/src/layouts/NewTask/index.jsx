@@ -2,14 +2,11 @@ import React from "react";
 import "./style.css";
 import Form from "../../components/Form";
 
-const NewTask = () => {
-  const handleFormSubmit = (value) => {
-    console.log("Form submit: ", value);
-  };
+const NewTask = ({ todos, setTodos }) => {
   return (
     <div className="newtask">
       <h3 className="title">New Task</h3>
-      <Form onSubmit={handleFormSubmit} />
+      <Form todos={todos} setTodos={setTodos} />
     </div>
   );
 };

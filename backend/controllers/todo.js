@@ -12,7 +12,7 @@ const todoController = {
         todo,
       });
     } catch (error) {
-      return res.status(200).json({
+      return res.status(500).json({
         success: false,
         error: error,
       });
@@ -29,7 +29,7 @@ const todoController = {
         todos,
       });
     } catch (error) {
-      return res.status(200).json({
+      return res.status(500).json({
         success: false,
         error: error,
       });
@@ -46,7 +46,7 @@ const todoController = {
         todo,
       });
     } catch (error) {
-      return res.status(200).json({
+      return res.status(500).json({
         success: false,
         error: error,
       });
@@ -65,7 +65,7 @@ const todoController = {
         todo,
       });
     } catch (error) {
-      return res.status(200).json({
+      return res.status(500).json({
         success: false,
         error: error,
       });
@@ -82,7 +82,7 @@ const todoController = {
         todo,
       });
     } catch (error) {
-      return res.status(200).json({
+      return res.status(500).json({
         success: false,
         error: error,
       });

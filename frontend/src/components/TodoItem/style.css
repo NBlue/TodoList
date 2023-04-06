@@ -16,6 +16,7 @@
 }
 .item .checkbox__input {
   margin: 0;
+  cursor: pointer;
 }
 .item .checkbox__label {
   font-size: 1rem;
@@ -24,12 +25,18 @@
   margin-left: 8px;
 }
 .item .action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .item .btn {
   width: 90px;
   padding: 6px 18px;
   font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 0;
   color: #fff;
   border-radius: 4px;
@@ -45,6 +52,10 @@
 }
 .item .action__remove {
   background: var(--red);
+}
+.btn.disable {
+  opacity: 0.8;
+  cursor: no-drop;
 }
 
 .item .form__update {
