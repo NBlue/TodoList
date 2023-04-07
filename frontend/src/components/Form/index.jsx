@@ -19,6 +19,7 @@ const Form = ({
     register,
     handleSubmit,
     reset,
+    setValue,
     formState: { errors },
   } = useForm({
     defaultValues: {
@@ -57,6 +58,8 @@ const Form = ({
         const filterTodos = todos.filter((todo) => todo._id !== id);
         const updateTodos = sortByDueDate([...filterTodos, res.todo]);
         setTodos(updateTodos);
+        setValue("title", data.title);
+        setValue("description", data.description);
       } else console.log(res);
 
       setLoading(false);
@@ -68,12 +71,17 @@ const Form = ({
 
   // Handle onSubmit
   const onSubmit = (data) => {
+    const validateData = {
+      ...data,
+      title: data.title.trim(),
+      description: data.description.trim(),
+    };
     if (type === "add") {
-      addTodo(data);
+      addTodo(validateData);
       reset();
     }
     if (type === "update") {
-      updateTodo(data, todo._id);
+      updateTodo(validateData, todo._id);
     }
   };
 

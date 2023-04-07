@@ -25,5 +25,6 @@
 ## Features:
 
 - Add/Update/Delete Todo
+- Validate Form
 - Search Todo
 - Responsive

@@ -13,7 +13,7 @@ const TodoList = ({ todos = [], setTodos, setOpenNewTaskMobile }) => {
   useEffect(() => {
     const findTodos = todos.filter((todo) => {
       const lowerTitle = todo.title.toLowerCase();
-      const lowersearchText = textSearch.toLowerCase();
+      const lowersearchText = textSearch.trim().toLowerCase();
       if (lowerTitle.includes(lowersearchText)) return todo;
     });
     setSearchTodos(findTodos);
