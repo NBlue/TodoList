@@ -17,6 +17,11 @@
   border-radius: 3px;
   outline: none;
   resize: none;
+  /* css loại bỏ mặc định trên iphone */
+  -webkit-appearance: none; /* loại bỏ giao diện mặc định của hệ điều hành */
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
 }
 
 #title.form__controller-input {
