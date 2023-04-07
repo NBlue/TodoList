@@ -59,3 +59,17 @@
 .submit-btn:hover {
   opacity: 0.8;
 }
+
+/* ===================== MEDIA QUERIES (MEDIUM SERVICE)================== */
+@media screen and (max-width: 1024px) {
+  .newtask .wraper {
+    display: block;
+  }
+}
+
+/* ===================== MEDIA QUERIES (SMALL SERVICE) =================== */
+@media screen and (max-width: 768px) {
+  .wraper {
+    display: block;
+  }
+}

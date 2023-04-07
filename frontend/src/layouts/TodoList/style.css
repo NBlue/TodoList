@@ -12,6 +12,7 @@
 .container {
   padding: 30px 40px;
   overflow-y: scroll;
+  position: relative;
 }
 
 .container::-webkit-scrollbar {
@@ -93,4 +94,42 @@
 }
 .todolist .btn__remove {
   background: var(--red);
+}
+
+.container .newtask__btn {
+  display: none;
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  background: var(--green);
+  border-radius: 2px;
+  border: none;
+  padding: 6px 20px;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease-in;
+}
+
+.container .newtask__btn:hover {
+  opacity: 0.8;
+}
+
+/* ===================== MEDIA QUERIES (MEDIUM SERVICE)================== */
+@media screen and (max-width: 1024px) {
+}
+
+/* ===================== MEDIA QUERIES (SMALL SERVICE) =================== */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  .container .newtask__btn {
+    display: block;
+    top: 20px;
+    right: 20px;
+  }
 }

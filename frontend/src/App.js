@@ -9,6 +9,7 @@ import { sortByDueDate } from "./utils/sortByDueDate";
 function App() {
   const [loading, setLoading] = useState(true);
   const [todos, setTodos] = useState([]);
+  const [openNewTaskMobile, setOpenNewTaskMobile] = useState(false);
 
   useEffect(() => {
     const getTodos = async () => {
@@ -31,8 +32,17 @@ function App() {
         <Loading />
       ) : (
         <div className="App">
-          <NewTask todos={todos} setTodos={setTodos} />
-          <TodoList todos={todos} setTodos={setTodos} />
+          <NewTask
+            todos={todos}
+            setTodos={setTodos}
+            openNewTaskMobile={openNewTaskMobile}
+            setOpenNewTaskMobile={setOpenNewTaskMobile}
+          />
+          <TodoList
+            todos={todos}
+            setTodos={setTodos}
+            setOpenNewTaskMobile={setOpenNewTaskMobile}
+          />
         </div>
       )}
     </>

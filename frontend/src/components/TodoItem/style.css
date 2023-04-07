@@ -22,7 +22,13 @@
   font-size: 1rem;
   font-weight: 600;
   line-height: 1rem;
-  margin-left: 8px;
+  margin: 0 8px;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
 }
 .item .action {
   display: flex;
@@ -67,4 +73,37 @@
 
 .item .form__update.disable {
   display: none;
+}
+
+/* ===================== MEDIA QUERIES (MEDIUM SERVICE)================== */
+@media screen and (max-width: 1024px) {
+  .newtask .wraper {
+    display: block;
+  }
+}
+
+/* ===================== MEDIA QUERIES (SMALL SERVICE) =================== */
+@media screen and (max-width: 768px) {
+  .item .item__wrap {
+    align-items: start;
+    flex-direction: column;
+    padding: 8px;
+  }
+
+  .item .checkbox {
+    margin-bottom: 12px;
+  }
+
+  .item .action {
+    width: 100%;
+  }
+
+  .item .btn {
+    width: 100%;
+    border-radius: 2px;
+  }
+
+  .item .form__update {
+    padding: 16px;
+  }
 }

@@ -4,7 +4,7 @@ import TodoItem from "../../components/TodoItem";
 import Loading from "../../components/Loading";
 import todoApi from "../../api/todoApi";
 
-const TodoList = ({ todos = [], setTodos }) => {
+const TodoList = ({ todos = [], setTodos, setOpenNewTaskMobile }) => {
   const [todoChecked, setTodoChecked] = useState([]);
   const [loading, setLoading] = useState(false);
   const [textSearch, setTextSearch] = useState("");
@@ -67,6 +67,14 @@ const TodoList = ({ todos = [], setTodos }) => {
             />
           ))}
         </ul>
+
+        {/* Button new stask reponsive */}
+        <button
+          className="newtask__btn"
+          onClick={() => setOpenNewTaskMobile(true)}
+        >
+          New Task
+        </button>
       </div>
 
       {todoChecked.length > 0 && (

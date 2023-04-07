@@ -7,4 +7,19 @@
   margin-right: auto;
   border: 1px solid var(--dark);
   overflow: hidden;
+  position: relative;
+}
+
+/* ===================== MEDIA QUERIES (MEDIUM SERVICE)================== */
+@media screen and (max-width: 1024px) {
+  /* .App {
+    display: block;
+  } */
+}
+
+/* ===================== MEDIA QUERIES (SMALL SERVICE) =================== */
+@media screen and (max-width: 768px) {
+  .App {
+    display: block;
+  }
 }

@@ -5,9 +5,16 @@ import Loading from "../Loading";
 import todoApi from "../../api/todoApi";
 import { sortByDueDate } from "../../utils/sortByDueDate";
 
-const Form = ({ type = "add", todo, todos, setTodos }) => {
+const Form = ({
+  type = "add",
+  todo,
+  todos,
+  setTodos,
+  setOpenNewTaskMobile,
+}) => {
   const [loading, setLoading] = useState(false);
 
+  // Config react hook form
   const {
     register,
     handleSubmit,
@@ -31,6 +38,7 @@ const Form = ({ type = "add", todo, todos, setTodos }) => {
       if (res.success) {
         const updateTodos = sortByDueDate([...todos, res.todo]);
         setTodos(updateTodos);
+        setOpenNewTaskMobile(false);
       } else console.log(res);
 
       setLoading(false);
@@ -58,6 +66,7 @@ const Form = ({ type = "add", todo, todos, setTodos }) => {
     }
   };
 
+  // Handle onSubmit
   const onSubmit = (data) => {
     if (type === "add") {
       addTodo(data);
